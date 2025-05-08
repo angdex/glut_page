@@ -79,7 +79,7 @@ interface Course {
 
 const router = useRouter()
 const loading = ref(false)
-const selectedDate = ref(new Date().toISOString().split('T')[0])
+const selectedDate = ref(new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-'))
 const scheduleData = ref<Course[]>([])
 
 const loadSchedule = async () => {
