@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,7 +17,7 @@ const router = createRouter({
       path: '/schedule',
       name: 'Schedule',
       component: () => import('../views/Schedule.vue'),
-      beforeEnter: (to, from, next) => {
+      beforeEnter: (_to: RouteLocationNormalized, _from: RouteLocationNormalized, next: NavigationGuardNext) => {
         const username = localStorage.getItem('username')
         const password = localStorage.getItem('password')
         
