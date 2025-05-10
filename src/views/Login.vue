@@ -88,7 +88,7 @@ const handleLogin = async () => {
     loading.value = true
     error.value = ''
     
-    const response = await fetch('https://valjupxxwmar.ap-southeast-1.clawcloudrun.com/api/login', {
+    const response = await fetch('glut-schedule-api.vercel.app/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
