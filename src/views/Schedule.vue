@@ -94,7 +94,7 @@ const loadSchedule = async () => {
   
   try {
     loading.value = true
-    const response = await fetch(`https://valjupxxwmar.ap-southeast-1.clawcloudrun.com/api/schedule?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&date=${selectedDate.value}`)
+    const response = await fetch(`glut-schedule-api.vercel.app/api/schedule?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&date=${selectedDate.value}`)
     const data = await response.json()
     
     if (data.success) {
